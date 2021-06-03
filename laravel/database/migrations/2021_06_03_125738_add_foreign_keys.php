@@ -42,6 +42,15 @@ class AddForeignKeys extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('cars', function(Blueprint $table) {
+
+            $table -> dropForeign('car_brand');
+        });
+
+        Schema::table('car_pilot', function(Blueprint $table) {
+
+            $table -> dropForeign('pilot_car');
+            $table -> dropForeign('car_pilot');
+        });
     }
 }
