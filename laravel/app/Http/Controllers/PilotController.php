@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Car;
 use App\Brand;
+use App\Pilot;
 
 class PilotController extends Controller
 {
@@ -25,8 +26,9 @@ class PilotController extends Controller
     public function create() {
 
         $brands = Brand::all();
+        $pilots = Pilot::all();
 
-        return view('pages.create', compact('brands'));
+        return view('pages.create', compact('brands', 'pilots'));
     }
 
     public function store(Request $request) {
@@ -42,7 +44,9 @@ class PilotController extends Controller
 
         $car -> brand() -> associate($brand);
         $car -> save();
-
+        
+        $car -> pilots() -> attach($request -> get('pilots_id'));
+        $car -> save();
 
         return redirect() -> route('home');
     }

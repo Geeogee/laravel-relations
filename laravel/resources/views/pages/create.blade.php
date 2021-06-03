@@ -30,7 +30,22 @@
                     <label for="brand_id"> Brand: </label> 
                     <select name="brand_id" id="brand_id">
                         @foreach ($brands as $brand)
-                            <option value="{{ $brand -> id }}">{{ $brand -> name }} ({{ $brand -> nationality }})</option>
+                            <option value="{{ $brand -> id }}">
+                                {{ $brand -> name }} 
+                                ({{ $brand -> nationality }})
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="wrapper-input">
+                    <label for="pilots_id[]"> Pilots: </label> 
+                    <select name="pilots_id[]" id="pilots_id[]" multiple>
+                        @foreach ($pilots as $pilot)
+                            <option value="{{ $pilot -> id }}">
+                                {{ $pilot -> firstname }} 
+                                {{ $pilot -> lastname}} 
+                                ({{ $pilot -> nationality }})
+                            </option>
                         @endforeach
                     </select>
                 </div>
