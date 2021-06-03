@@ -1,0 +1,7 @@
+footer {
+
+    height: 80px;
+    @include flex(row, center, center);
+    color: $reshiram-white;
+    background-color: $loudred-pastel-purple;
+}

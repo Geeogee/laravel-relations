@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PilotController@home') -> name('home');
+
+Route::get('car/{id}', 'PilotController@show') -> name('show');
+
+Route::get('create', 'PilotController@create') -> name('create');
+Route::post('store', 'PilotController@store') -> name('store');

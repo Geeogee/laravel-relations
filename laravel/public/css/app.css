@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  background-color: #ae99c6;
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  background-color: #ae99c6;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+  background-color: #FFF;
+}
+
+main .container {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  color: #7d5ca3;
+}
+
+main ul {
+  list-style-type: none;
+}
+
+main .cars-list .car-name {
+  text-transform: uppercase;
+  color: #2288b1;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+div#wrapper-car h1 {
+  text-transform: uppercase;
+}
+
+div#wrapper-car .pilots-list {
+  margin-top: 10px;
+}
+
+div#wrapper-car .pilots-list .pilot {
+  padding: 10px 0;
+}
+
