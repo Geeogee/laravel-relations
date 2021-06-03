@@ -3,11 +3,11 @@
         Header
     </h2>
 
-    <a href="{{ route('home') }}">
+    <a class="button-link" href="{{ route('home') }}">
         Back to Homepage
     </a>
 
-    <a href="{{ route('create') }}">
+    <a class="button-link" href="{{ route('create') }}">
         Add a new car 
     </a>
 </header>

@@ -23,9 +23,19 @@ main {
         .car-name {
 
             text-transform: uppercase;
-            color: $swamper-pastel-blue;
+            color: $zekrom-black;
             font-weight: 400;
             padding: 5px 0;
+        }
+
+        a {
+
+            text-decoration: none;
+            color: $guybrush-dark;
+            &:hover {
+
+                text-decoration: underline;
+            }
         }
     }
 }

@@ -10,6 +10,8 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+@import 'components/buttons';
+
 @import 'helpers/mixins';
 @import 'helpers/variables';
 
@@ -17,4 +19,5 @@ body {
 @import 'layout/footer';
 
 @import 'pages/homepage';
-@import 'pages/car';
+@import 'pages/showcar';
+@import 'pages/createcar';
